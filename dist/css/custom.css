@@ -1,0 +1,332 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  /*padding-top: 50px;
+  padding-bottom: 20px;*/
+}
+
+.panel-heading {
+	padding-top:3px;
+	padding-bottom:3px;
+	/*background-color : #007DA9;*/
+	color: black;
+}
+
+.btn-custom {
+	color: #b8e7f9;
+	background-color : #007DA9;
+	border-color : #007DA9;
+}
+
+.navbar-custom {
+	background-color : #9F1F1F;
+}
+
+.navbar-inverse .navbar-brand  {
+	color : #007da9;
+}
+
+.navbar-inverse .navbar-brand:focus  ,
+.navbar-inverse .navbar-brand:hover  {
+	color : #F5A9A9;	
+}
+
+.header {
+	background-color : #007DA9;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+	background-color:#F5A9A9;	
+	border-color:#F5A9A9;	
+}
+
+.fa-android{
+	color:#F5A9A9;
+}
+
+.centered {
+    display: table-cell;
+    vertical-align: middle;
+	margin: 0 auto;
+}
+
+.jumbotron {
+	padding-top: 20px;
+	height:800px;
+}
+
+/* d3 */
+
+
+.overlay {
+  position: absolute;
+  background: rgba(100,100,100,0);
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+}
+
+.element {
+  background: none;
+  position: absolute;
+  opacity: 1;
+  width: 150px; 
+  height: 100px;
+}
+
+.kb_container {
+	position:relative;
+}
+
+.map_container {
+	display:inline-block;
+	position:relative;
+	margin-top:150px;
+}
+
+.robot {
+	position:absolute; 
+}
+
+.map {
+	position:absolute;
+	top:0px; 
+	left:0px;
+}
+
+.querycell {
+	padding: 2px;
+}
+
+img#logo {
+    height: 50px;
+    width: auto;
+}
+
+/*.kb-table tr {
+	background-color:#F5A9A9;	
+}*/
+
+.room-heading {
+/*		background-color : #007DA9;*/
+/*		color:  #b8e7f9;*/
+	color : #333;
+}
+
+.panel-cstm {
+	border: 2px solid  #007DA9 ;
+	border-radius: 6px;
+}
+
+p.name {
+	font-weight: bold;
+}
+
+#capability_container {
+	background: #7fff9d;
+	/*border-color: #7fff9d;
+	border-style: solid ;*/
+	margin-right:5px;
+	padding: 5px;
+}
+
+#program_container {
+/*	border-color: #fff772;
+	border-style: solid ;*/
+	background: #fff772;
+	margin-right:5px;
+	padding: 5px;
+}
+
+#blocks_container {
+/*	border-color: #89b8ff;
+	border-style: solid ;*/
+	background: #89b8ff;
+	margin-right:5px;
+	padding: 5px;
+}
+
+.padding-lr-5 {
+	padding-left:5px;
+	padding-right:5px;
+}
+
+.program {
+	border: 3px dashed gray;
+	border-radius: 15px;
+	padding:10px;
+	margin-top:5px;
+}
+
+.block {
+	background: #C0C0C0;
+	/*border:3px dashed gray;*/
+	padding: 3px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	margin-left: 3px;
+	margin-right: 3px;
+	overflow: auto;
+	/*height: 70px;*/
+}
+
+.dashed {
+	border: 3px dashed gray;
+}
+
+.solid {
+	border: 3px solid gray;
+}
+
+.rounded-7 {	
+	border-radius: 7px;
+}
+
+.rounded-15 {	
+	border-radius: 15px;
+}
+
+.overflow {
+	overflow: auto;
+}
+
+.group {
+	background: #e5e5e5;
+	border-radius: 15px;
+	padding: 3px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.capability {
+	background: #C0C0C0;
+	margin-top:3px;
+	margin-bottom:3px;
+	padding: 3px;
+}
+
+.placeholder {
+	color: gray;
+	font-size: 2em;
+	font-weight: bold;
+	height: 50px;
+	text-align: center;
+}
+
+.condition_container {
+	/*background: #e5e5e5;
+	border:3px solid gray;
+	padding: 2px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	overflow: auto;*/
+}
+
+.if, .then, .else {
+	padding: 4px;
+	margin: 2px;
+	background: #fc7171;
+}
+
+.while {
+	padding: 4px;
+	margin: 2px;
+	background:#b086f4;
+}
+
+.do {
+	padding: 4px;
+	margin: 2px;
+	background:#b086f4;
+}
+
+.condition {
+	overflow: auto;
+	background: #548da8;
+	padding: 2px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.parameter {
+	background: #C0C0C0;
+	padding: 3px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	height: 40px;
+}
+
+.placeholder {
+	font-weight: bold;
+	font-size: 1.5em;
+	color: gray;
+}
+
+.statement {
+	background: #82ff9d;
+}
+
+.container {
+	width: 1500px;
+}
+
+.capability-parameters {
+	padding: 2px;
+}
+
+.capability-parameter {
+	padding: 2px;
+	margin-top:2px;
+	margin-bottom:2px;
+}
+
+.capability-parameter-text {
+	font-size: 1.0em;
+	font-weight: bold;
+}
+
+.keyword {
+	font-size: 1.6em;
+	font-weight: bold;
+}
+
+.program-text {
+	font-size: 1.0em;
+	font-weight: bold;
+}
+
+.block-item {
+	margin-top:3px;
+	margin-bottom:3px;
+	background: white;
+	padding: 3px;
+}
+
+.block-text {
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.btn {
+	padding: 4px 8px;
+}
+
+.capability-block {
+	padding: 4px;
+}
+
+.condition-text {
+	font-size: 1.0em;
+	font-weight: bold;
+	color: white;
+}
+
+.noop {
+	background:#d4cdd6;
+}
+
+.map-container {
+	overflow: scroll;
+	width:450px;
+	height:200px;
+}

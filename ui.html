@@ -1,0 +1,36 @@
+<div class="">
+	<h3>Select Robot Behaviour</h3>
+	<div class="container">
+		<div class="container">
+			<select ng-options="rule.description for rule in rules" ng-model="selectedRule">
+				<option value="">-- choose color --</option>
+			</select>
+			<button type="button" class="btn btn-lg btn-info" ng-click="run()">Run</button>
+		</div>
+		<div class="statuses">
+			<table>
+				<tr>
+					<th>
+						Name
+					</th>
+					<th>
+						Rule
+					</th>
+					<th>
+						Validity
+					</th>
+				</tr>
+				<tr ng-repeat="_status in statuses">
+					<td>{{ _status.entity.name}}</td>
+					<td>{{ _status.rule.comment}}</td>
+					<td ng-style="_status.color">
+						<span ng-if="!_status.violated">check</span><span ng-if="_status.violated">
+							<span ng-repeat="entity in _status.entity_violating track by $index">{{entity}}, </span>
+						</span>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+	</div>
+</div>
