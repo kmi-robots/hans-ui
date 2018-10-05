@@ -17,8 +17,8 @@ body {
 	border-color : #007DA9;
 }
 
-.navbar-custom {
-	background-color : #9F1F1F;
+.card:hover {
+	border-color: #e78230;
 }
 
 .navbar-inverse .navbar-brand  {
@@ -49,10 +49,6 @@ body {
 	margin: 0 auto;
 }
 
-.jumbotron {
-	padding-top: 20px;
-	height:800px;
-}
 
 /* d3 */
 
