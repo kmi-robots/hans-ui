@@ -1,36 +1,46 @@
 <div class="">
-	<h3>Select Robot Behaviour</h3>
+	
 	<div class="container">
-		<div class="container">
-			<select ng-options="rule.description for rule in rules" ng-model="selectedRule">
-				<option value="">-- choose color --</option>
-			</select>
-			<button type="button" class="btn btn-lg btn-info" ng-click="run()">Run</button>
-		</div>
-		<div class="statuses">
-			<table>
-				<tr>
-					<th>
-						Name
-					</th>
-					<th>
-						Rule
-					</th>
-					<th>
-						Validity
-					</th>
-				</tr>
-				<tr ng-repeat="_status in statuses">
-					<td>{{ _status.entity.name}}</td>
-					<td>{{ _status.rule.comment}}</td>
-					<td ng-style="_status.color">
-						<span ng-if="!_status.violated">check</span><span ng-if="_status.violated">
-							<span ng-repeat="entity in _status.entity_violating track by $index">{{entity}}, </span>
-						</span>
-					</td>
-				</tr>
-			</table>
-		</div>
+			
+			<h3 class="text-center m-5">
+				<strong>Select a rule to check in KMi
+				</strong>
+			</h3>
+			<div class="row mt-3">
+				<div class="col-md-3"  ng-repeat="rule in rules track by $index" >
+					<div class="card mb-2"  ng-model="selectedRule"  >
+  						<div class="card-body">
+    							<h5 class="card-title">Rule #{{$index+1}}</h5>
+    							<p class="card-text">{{rule.description}}</p>
+    							<a ng-click="run()" class="card-link">Check this rule</a>
+  						</div>
+					</div>
+				</div>
+			</div>
+
+			 
+	
+			<div class="mt-3 statuses">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Rule</th>
+							<th>Validity</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="_status in statuses">
+							<td>{{ _status.entity.name}}</td>
+							<td>{{ _status.rule.comment}}</td>
+							<td ng-style="_status.color">
+								<span ng-if="!_status.violated">check</span><span ng-if="_status.violated"></span>
+								<span ng-repeat="entity in _status.entity_violating track by $index">{{entity}}, </span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		
 	</div>
 </div>
