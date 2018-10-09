@@ -42,6 +42,10 @@ function dataService () {
 	this.ip = "http://localhost:"+this.serverPort;
 	this.robotIp = "http://localhost:"+this.robotControllerPort;
 	
+	// gianluca eduroam
+	//this.ip = "http://137.108.117.48:"+this.serverPort;
+	//this.robotIp = "http://137.108.117.48:"+this.robotControllerPort;
+	
 	// TODO: this should be probably done in a better way
 	this.namespaces = {
 		"hsf":"http://data.open.ac.uk/kmi/hans#",
@@ -241,11 +245,9 @@ function hansInterfaceCtrl($scope, $http, $state, $compile,$interval, Data){
 						
 						gettingEntity.then(function(data){
 							
-
-								
 							var entity = data["results"][0];
 							var rule = getRule(entity["class"]);
-						
+							
 							newStatus = {
 								"entity":entity,
 								"rule":rule,
@@ -314,15 +316,18 @@ function hansInterfaceCtrl($scope, $http, $state, $compile,$interval, Data){
 	
 	function getRule(_class) {
 		
+		var ret = {};
+		
 		angular.forEach($scope.rules, function(rule) {
-						
+			
 			if (rule["target"] == _class) {
 				
-				return rule;
+				ret = rule;
 				
 			}
 		});
 		
+		return ret;
 	}
 	
 	
